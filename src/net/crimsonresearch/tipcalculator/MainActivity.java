@@ -28,8 +28,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		tvEnterAmount = (EditText)findViewById(R.id.tvEnterAmmount);
 		tvComputedTip = (TextView)findViewById(R.id.tvComputedTip);
-		btnTenPercent = (Button)findViewById(R.id.btnTenPrecent);
-		btnFifteenPercent = (Button)findViewById(R.id.btnFifteenPrecent);
+		btnTenPercent = (Button)findViewById(R.id.btnTenPercent);
+		btnFifteenPercent = (Button)findViewById(R.id.btnFifteenPercent);
 		btnTwentyPercent = (Button)findViewById(R.id.btnTwentyPercent);
 	}
 

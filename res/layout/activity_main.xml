@@ -9,7 +9,7 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/btnFifteenPrecent"
+        android:id="@+id/btnFifteenPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -18,12 +18,12 @@
         android:text="@string/fifteen_button_title" />
 
     <Button
-        android:id="@+id/btnTenPrecent"
+        android:id="@+id/btnTenPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tvComputedTip"
         android:layout_marginRight="14dp"
-        android:layout_toLeftOf="@+id/btnFifteenPrecent"
+        android:layout_toLeftOf="@+id/btnFifteenPercent"
         android:onClick="computeTip"
         android:text="@string/ten_button_title" />
 
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/tvComputedTip"
         android:layout_marginLeft="14dp"
-        android:layout_toRightOf="@+id/btnFifteenPrecent"
+        android:layout_toRightOf="@+id/btnFifteenPercent"
         android:onClick="computeTip"
         android:text="@string/twenty_button_title" />
 
@@ -52,7 +52,7 @@
         android:id="@+id/tvComputedTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnFifteenPrecent"
+        android:layout_below="@+id/btnFifteenPercent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp"
         android:hint="@string/result_Text_View_hint"
