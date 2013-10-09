@@ -9,5 +9,6 @@
     <string name="fifteen_button_title">15%</string>
     <string name="twenty_button_title">20%</string>
     <string name="result_Text_View_hint">Tip is: 7.5</string>
+    <string name="numberInParty">Number of Guests</string>
 
 </resources>
