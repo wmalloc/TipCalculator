@@ -4,7 +4,6 @@ import java.text.NumberFormat;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.view.Menu;
@@ -21,6 +20,8 @@ public class MainActivity extends Activity {
 	private Button btnTenPercent;
 	private Button btnFifteenPercent;
 	private Button btnTwentyPercent;
+	private TextView tvSplitTip;
+	private EditText etPartyCount;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,8 @@ public class MainActivity extends Activity {
 		btnTenPercent = (Button)findViewById(R.id.btnTenPercent);
 		btnFifteenPercent = (Button)findViewById(R.id.btnFifteenPercent);
 		btnTwentyPercent = (Button)findViewById(R.id.btnTwentyPercent);
+		tvSplitTip = (TextView)findViewById(R.id.tvSplitTip);
+		etPartyCount = (EditText)findViewById(R.id.etPartyCount);
 	}
 
 	@Override
@@ -60,5 +63,15 @@ public class MainActivity extends Activity {
 		NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
 		String result = "Tip is: " + currencyFormat.format(tip);
 		tvComputedTip.setText(result);
+		try {
+			String amount = etPartyCount.getText().toString();
+			value = Float.parseFloat(amount);
+		} catch (NumberFormatException nfe) {
+			value = 1;
+			etPartyCount.setText(Integer.toString((int) value));
+		}
+		double perGuest = tip / value;	
+		String perGuestString = "Per Guest Tip: " + currencyFormat.format(perGuest);
+		tvSplitTip.setText(perGuestString);
 	}
 }

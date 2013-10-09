@@ -9,15 +9,6 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/btnFifteenPercent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="computeTip"
-        android:text="@string/fifteen_button_title" />
-
-    <Button
         android:id="@+id/btnTenPercent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,6 +47,39 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="44dp"
         android:hint="@string/result_Text_View_hint"
+        android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnFifteenPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvEnterAmmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:onClick="computeTip"
+        android:text="@string/fifteen_button_title" />
+
+    <EditText
+        android:id="@+id/etPartyCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvEnterAmmount"
+        android:layout_below="@+id/tvComputedTip"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:hint="@string/numberInParty"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tvSplitTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPartyCount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="Large Text"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
